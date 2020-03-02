@@ -1,0 +1,25 @@
+//Cambiamos el logo
+add_action( 'login_enqueue_scripts', 'bs_change_login_logo' );
+function bs_change_login_logo() { ?> 
+
+<style type="text/css"> 
+  
+#login h1 a {
+background-image: url("escribe aquí la url);
+pointer-events:none;
+} 
+					  
+</style>
+					  
+<?php }
+
+//Cambiamos la URL del logo			  
+add_filter( 'login_headerurl', 'bs_login_logo_url' );
+function bs_login_logo_url($url) {
+    return '#';}
+    
+//Cambiamos el título de la URL del logo
+add_filter( 'login_headertitle', 'bs_login_logo_url_title' );
+function bs_login_logo_url_title() {
+    return '';}
+    
